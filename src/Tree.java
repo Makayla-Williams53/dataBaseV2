@@ -6,11 +6,12 @@ public class Tree
 {
     public static TreeNode perfectBinaryTree(int depth)
     {
+        Random rand = new Random();
         //depth is the variable that determines the height of the tree
         if(depth == 0)
         {
             //if the tree has no height return a zero
-            return new TreeNode(0);
+            return new TreeNode(rand.nextInt(0, 25));
         }
 
         //create and initialize a queue to hold the nodes on each level
@@ -19,7 +20,7 @@ public class Tree
         int i = 0;
         //create a root node with the value of 0
 
-        TreeNode root = new TreeNode(0);
+        TreeNode root = new TreeNode(rand.nextInt(0, 25));
 
         //add the root to the queue
         queue.add(root);
@@ -46,9 +47,9 @@ public class Tree
                     //remove the current node from the queue
                     TreeNode node = queue.remove();
                     //add left child
-                    node.left = new TreeNode(i);
+                    node.left = new TreeNode(rand.nextInt(0, 25));
                     //add right child
-                    node.right = new TreeNode(i);
+                    node.right = new TreeNode(rand.nextInt(0, 25));
 
                     //add the children to the queue
                     queue.add(node.left);
