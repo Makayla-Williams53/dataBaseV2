@@ -17,9 +17,9 @@ public class Tree
         Queue<TreeNode> queue = new LinkedList<>();
 
         int i = 0;
-        //create a root node with the value of 16
+        //create a root node with the value of 0
 
-        TreeNode root = new TreeNode();
+        TreeNode root = new TreeNode(0);
 
         //add the root to the queue
         queue.add(root);
